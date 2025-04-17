@@ -33,7 +33,7 @@ TEST(Correctness, Write) {
     });
     std::this_thread::sleep_for(100ms);
     ASSERT_EQ(counter.load(), 0);
-    lock.UnlockWrite();
+    lock.UnLockWrite();
     t1.join();
     ASSERT_EQ(counter.load(), 1);
 }
@@ -49,7 +49,7 @@ TEST(Correctness, ReadWrite) {
     });
     std::this_thread::sleep_for(100ms);
     ASSERT_EQ(counter.load(), 0);
-    lock.UnlockRead();
+    lock.UnLockRead();
     t1.join();
     ASSERT_EQ(counter.load(), 1);
 }
@@ -65,7 +65,7 @@ TEST(Correctness, WriteRead) {
     });
     std::this_thread::sleep_for(100ms);
     ASSERT_EQ(counter.load(), 0);
-    lock.UnlockWrite();
+    lock.UnLockWrite();
     t1.join();
     ASSERT_EQ(counter.load(), 1);
 }

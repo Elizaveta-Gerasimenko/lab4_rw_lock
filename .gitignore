@@ -2400,3 +2400,20 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+# Временные файлы IDE (Visual Studio, CLion)
+/.vs/
+/.idea/
+/cmake-build-*/
+
+# Бинарные файлы и папки сборки
+/bin/
+/obj/
+*.exe
+*.dll
+*.so
+*.a
+
+# Логи и кэш
+*.log
+*.cache
